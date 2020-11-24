@@ -1,3 +1,6 @@
-from django.shortcuts import render
+from django.views.generic import ListView
+from .models import Asignatura
 
-# Create your views here.
+class ListAsignatura(ListView):
+   model = Asignatura
+   template_name = 'asignaturas/listado.html'
